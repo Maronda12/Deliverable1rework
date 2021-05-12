@@ -6,6 +6,7 @@ namespace Deliverable1
     {
         static void Main(string[] args)
         {
+            double trueAmount; 
         Start:
             Console.WriteLine("Lets Get to Converting!");
 
@@ -16,29 +17,67 @@ namespace Deliverable1
             double userAmount = double.Parse(Console.ReadLine());
 
 
-            double trueAmount = userAmount *= 3.5;
-            double trueAmount2 = userAmount /= 1;
-            double trueAmount3 = userAmount *= 5; 
+           
 
             if (userType == "inch")
             {
-                Console.WriteLine("Equals");
-                Console.WriteLine(trueAmount + " fidget spinners");
+               trueAmount = userAmount *= 3.5;
+                if (trueAmount != 1)
+                {
+                    Console.WriteLine("Equals");
+                    Console.WriteLine(trueAmount + " Fidget Spinners");
+                }
+                else
+                { 
+                    Console.WriteLine("Equals");
+                    Console.WriteLine(trueAmount + " Fidget Spinner");
+
+                }
             }
+
             else if (userType == "fidget spinners")
             {
-                Console.WriteLine("Equals");
-                Console.WriteLine(trueAmount2 + " inch");
+                trueAmount = userAmount /= 3.5;
+                if (trueAmount != 1)
+                {
+                    Console.WriteLine("Equals");
+                    Console.WriteLine(trueAmount + " Inches");
+                }
+                else
+                {
+                    Console.WriteLine("Equals");
+                    Console.WriteLine(trueAmount + " Inch");
+                }  
             }
+
             else if (userType == "foot")
             {
-                Console.WriteLine("Equals");
-                Console.WriteLine(trueAmount3 + " memes ");
+                trueAmount = userAmount *= 5;
+                if (trueAmount != 1)
+                {
+                    Console.WriteLine("Equals");
+                    Console.WriteLine(trueAmount +  " Memes");
+                }
+                else
+                {
+                    Console.WriteLine("Equals");
+                    Console.WriteLine(trueAmount + " Meme");
+                }
+                
             }
             else if (userType == "memes")
             {
-                Console.WriteLine("Equals");
-                Console.WriteLine(trueAmount2 + " foot");
+                trueAmount = userAmount /= 5; 
+                if (trueAmount != 1)
+                {
+                    Console.WriteLine("Equals");
+                    Console.WriteLine(trueAmount + " Feet");
+                }
+                else
+                {
+                    Console.WriteLine("Equals");
+                    Console.WriteLine(trueAmount + " Foot");
+                }
             }
 
             Console.WriteLine("Would you like to convert another measurement?");
